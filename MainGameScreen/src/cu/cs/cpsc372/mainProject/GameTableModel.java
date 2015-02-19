@@ -53,6 +53,10 @@ public class GameTableModel extends AbstractTableModel{
         
         // Alert the table that the row has been inserted
         fireTableRowsInserted(row, row);	
-}
+	}
+	
+	public void updateCell(Sector sec, int row, int col){
+		
+	}
 
 }

@@ -14,7 +14,7 @@ public class RowOfSectors implements Serializable{
 	
 	public RowOfSectors(int rowNum){
 		ArrayList<String> row = new ArrayList<String>();
-		Integer index = rowNum + 1;
+		Integer index = rowNum;
 		row.add(index.toString());
 		
 		Sector defaultSector = new Sector();
@@ -26,12 +26,6 @@ public class RowOfSectors implements Serializable{
 		
 	public ArrayList<String> getRowOfSectors(){
 		return mySectors;
-	}
-	
-	public void addRows(ArrayList<RowOfSectors> rows){
-		for(RowOfSectors row: rows){
-			
-		}
 	}
 	
 	public String getSector(int index){

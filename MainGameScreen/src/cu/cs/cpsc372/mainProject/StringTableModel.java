@@ -33,17 +33,20 @@ public class StringTableModel extends AbstractTableModel {
         return table.get(rowIndex);
     }
 
-    // Adds a single contact to the table
+    // Adds a single element to the table
     public void addElement(String element) {
         int row = getRowCount();
-        // Add the contact to the table
-        table.add(element);
+        // Add the element to the table
+        if(row>19){
+        	table.remove(19);
+        }
+        table.add(0, element);
         
         // Alert the table that the row has been inserted
         fireTableRowsInserted(row, row);
     }
 
-    // Returns the contact at that row 
+    // Returns the element at that row 
     public String getElement(int row) {
     	// Construct and return a element
     	String element = table.get(row);
@@ -67,6 +70,10 @@ public class StringTableModel extends AbstractTableModel {
     @Override
     public boolean isCellEditable(int row, int col) {
         return false;
+    }
+    
+    public void update(){
+    	
     }
     
 }

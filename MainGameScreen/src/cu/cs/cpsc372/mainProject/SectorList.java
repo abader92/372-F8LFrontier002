@@ -7,7 +7,7 @@ public class SectorList {
 	private static String[] columns = { "", "1", "2", "3", "4", "5", "6", "7", "8" };
 	private static ArrayList<Object> cols = new ArrayList<Object>();
 	
-	SectorList(int row){
+	SectorList(){
 		for(int i=0; i<9; i++) cols.add(columns[i]);
 		mySectors.add(cols);
 		mySectors.get(0).add(cols);

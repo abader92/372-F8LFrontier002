@@ -10,7 +10,14 @@ public class Sector {
 		planets = 0;
 		hostiles = 0;
 		friendBases = 0;
-		desc = "";
+		desc = "|";
+	}
+	
+	Sector(int p, int h, int fB){
+		planets = p;
+		hostiles = h;
+		friendBases = fB;
+		desc = planets.toString() + hostiles.toString() + friendBases.toString();
 	}
 	
 	public String getPlanets() {
@@ -25,6 +32,10 @@ public class Sector {
 	
 	public String getDesc() {
 		return desc;
+	}
+	
+	public void playerInSector() {
+		desc = ">" + desc; 
 	}
 
 	@Override

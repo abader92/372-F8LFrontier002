@@ -14,7 +14,7 @@ public class SectorTableModel extends AbstractTableModel {
 	
 	
 	public SectorTableModel(){
-		mySectorList = new SectorList(getRowCount());
+		mySectorList = new SectorList();
 		
 		for(int i=0; i<9; i++){
 			ArrayList<String> sectorStrings = new ArrayList<String>();
@@ -49,6 +49,21 @@ public class SectorTableModel extends AbstractTableModel {
 	@Override
 	public boolean isCellEditable(int row, int col) {
 	    return false;
+	}
+	
+	public void updateCell(int row, int col, Integer info){
+		switch (info) {
+			//Planet
+			case 1: table.get(row).set(col, "O");
+					break;
+			case 2: table.get(row).set(col, "<");
+					break;
+			case 3: table.get(row).set(col, "E");
+					break;
+			case 4: table.get(row).set(col, "A");
+					break;
+			default: break;
+		}
 	}
 	
 	void addElements(ArrayList<ArrayList<Object>> sector) {
