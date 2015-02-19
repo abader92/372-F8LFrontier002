@@ -2,8 +2,6 @@ package cu.cs.cpsc372.mainProject;
 
 import java.util.ArrayList;
 
-import cu.cs.cpsc372.f8l.shared.Ship;
-
 public class ShipTableModel extends StringTableModel {
 	private static final long serialVersionUID = -4944968645017699034L;
 	private Ship userShip;

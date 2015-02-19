@@ -19,6 +19,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import cu.cs.cpsc372.f8l.shared.*;
+
 import javax.swing.SwingConstants;
 
 public class GameFrame extends JFrame {
